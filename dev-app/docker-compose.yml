@@ -1,0 +1,12 @@
+version: "3.9"
+
+services: 
+  app:
+    build: ./
+    container_name: dev-app
+    restart: always
+    volumes: 
+      - ./:/usr/app
+      - /usr/app/node_modules
+    ports: 
+      - "80:3000"

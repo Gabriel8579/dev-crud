@@ -6,7 +6,7 @@ import { DeleteResult, UpdateResult } from 'typeorm';
 import { DesenvolvedoresService } from './desenvolvedores.service';
 import { DesenvolvedorDto } from './interfaces/Desenvolvedor.dto';
 
-@Controller('desenvolvedores')
+@Controller('developers')
 export class DesenvolvedoresController {
    constructor(private readonly desenvolvedoresService: DesenvolvedoresService) {}
    

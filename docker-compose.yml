@@ -1,0 +1,43 @@
+version: "3.9"
+
+services: 
+  db:
+    image: mariadb
+    container_name: mariadb
+    restart: always
+    command: --init-file /home/service/init.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: senha1
+      ON_CREATE_DB : api
+    volumes: 
+      - ./dev-api/db/data:/var/lib/mysql
+      - ./dev-api/init.sql:/home/service/init.sql
+  
+  api:
+    build: ./dev-api
+    container_name: dev-api
+    restart: always
+    environment: 
+      DESENVOLVEDORES_API_USERNAME: root
+      DESENVOLVEDORES_API_PASSWORD: senha1
+      DESENVOLVEDORES_API_PORT: 3306
+      DESENVOLVEDORES_API_HOST: mariadb
+    volumes: 
+      - ./dev-api:/usr/api
+      - /usr/api/node_modules
+    ports: 
+      - "8000:8000"
+    depends_on: 
+      - db
+  
+  app:
+    build: ./dev-app
+    container_name: dev-app
+    restart: always
+    volumes: 
+      - ./dev-app:/usr/app
+      - /usr/app/node_modules
+    ports: 
+      - "80:3000"
+    depends_on: 
+      - api

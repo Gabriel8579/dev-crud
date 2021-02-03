@@ -8,10 +8,27 @@
 		{
 			"name": "Criar desenvolvedor",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Gabriel Postai\",\r\n    \"sexo\": \"M\",\r\n    \"idade\": 19,\r\n    \"hobby\": \"Programar\",\r\n    \"datanascimento\": \"2001-09-25\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8000/desenvolvedores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"desenvolvedores"
+					]
 				},
 				"description": "Cria um novo desenvolvedor"
 			},
@@ -23,7 +40,25 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8000/desenvolvedores?page=0&limit=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"desenvolvedores"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
 				}
 			},
 			"response": []
@@ -34,7 +69,29 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8000/desenvolvedores?nome=Postai&idade=19&hobby=ar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"desenvolvedores"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Postai"
+						},
+						{
+							"key": "idade",
+							"value": "19"
+						},
+						{
+							"key": "hobby",
+							"value": "ar"
+						}
+					]
 				}
 			},
 			"response": []
@@ -42,10 +99,28 @@
 		{
 			"name": "Atualiza desenvolvedor",
 			"request": {
-				"method": "GET",
+				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Gabriel Postai\",\r\n    \"sexo\": \"M\",\r\n    \"idade\": 19,\r\n    \"hobby\": \"Desenvolver\",\r\n    \"datanascimento\": \"2001-09-25\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8000/desenvolvedores/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"desenvolvedores",
+						"4"
+					]
 				}
 			},
 			"response": []
@@ -53,10 +128,19 @@
 		{
 			"name": "Exclui desenvolvedor",
 			"request": {
-				"method": "GET",
+				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8000/desenvolvedores/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"desenvolvedores",
+						"5"
+					]
 				}
 			},
 			"response": []
@@ -67,7 +151,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8000/desenvolvedores/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"desenvolvedores",
+						"1"
+					]
 				}
 			},
 			"response": []

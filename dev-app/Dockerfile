@@ -1,6 +1,6 @@
 FROM node:15.7.0-alpine
 
-WORKDIR /usr/api
+WORKDIR /usr/app
 
 COPY package*.json ./
 
@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 8000:8000
+EXPOSE 80:3000
 
-CMD ["npm", "run", "start:docker:dev"]
+CMD npm start
