@@ -4,15 +4,15 @@
 
 > Uma API e um APP desenvolvidos utilizando NestJS e ReactJS, respectivamente
 
-> Documentações geradas pelo Swagger
+Documentações geradas pelo Swagger
 
-> Testes unitários utilizando JEST
+Testes unitários utilizando JEST
 
-> Banco de dados utilizado: MariaDB
+Banco de dados utilizado: MariaDB
 
 ## Pré-requisitos
 
-> Docker e docker-compose precisam estar instalados.
+Docker e docker-compose precisam estar instalados.
 
 ## Instalação
 
@@ -37,3 +37,5 @@ As documentações completas geradas pelo Swagger estão disponiveis no link htt
 Foi disponibilizado uma collection do Postman para auxiliar nos testes da API
 
 As telas do APP foram feitas utilizando o [ReactAdmin](https://marmelab.com/react-admin/) devido o mesmo fazer toda a funcionalidade desejada e ser de facil manipulação/uso. Foi necessário criar um adaptador para atender as necessidades do mesmo em relação a comunicação com a API.
+
+O MariaDB já cria o banco de dados utilizado automaticamente, então não é necessário nenhuma configuração adicional para se executar o projeto (a não ser que esteja rodando fora do docker-compose disponibilizado).
