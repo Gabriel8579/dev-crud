@@ -2,7 +2,7 @@ import * as React from "react";
 import { Admin, Resource } from "react-admin";
 import { DesenvolvedoresList } from "./components/DesenvolvedoresList";
 import { DesenvolvedoresEdit } from "./components/DesenvolvedoresEdit";
-import apiAdapter from "./helpers/apiAdapter";
+import apiAdapter from "./helpers/ApiAdapter";
 import { DesenvolvedoresCreate } from "./components/DesenvolvedoresCreate";
 import ptBrMessages from 'ra-language-pt-br';
 import polyglotI18nProvider from 'ra-i18n-polyglot';

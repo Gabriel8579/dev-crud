@@ -14,6 +14,7 @@ export const DesenvolvedoresList = (props) => (
             <TextField source="nome" sortable={false} />
             <SelectField
                 source="sexo"
+                sortable={false}
                 choices={[
                     { id: "M", name: "Masculino" },
                     { id: "F", name: "Feminino" },
